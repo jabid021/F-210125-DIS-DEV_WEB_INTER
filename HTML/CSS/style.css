@@ -1,0 +1,30 @@
+
+h3
+{
+  color : red;
+  border-bottom:solid red 1px;
+}
+
+h5
+{
+  color:green;
+  background-color:lightgrey;
+}
+
+a
+{
+  color : orange;
+  font-size:70px;
+  cursor:help;
+}
+
+.imgRound
+{
+  border:solid;
+  border-radius: 50%;
+}
+
+#img1
+{
+  border:solid 10px;
+}
