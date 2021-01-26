@@ -1,0 +1,75 @@
+<html>
+  <head>
+      <title>TEST</title>
+      <meta charset="UTF-8">
+  </head>
+
+
+<body>
+  <form>
+      <fieldset>
+
+          <legend>informations personelles</legend>
+          <table>
+            <tr>
+              <td>Email</td>
+              <td><input name="email" type="text"placeholder="lorem@mail.fr"></td>
+            </tr>
+            <tr>
+              <td>Mot de passe</td>
+              <td> <input name="password" type="password" placeholder="*********"></td>
+            </tr>
+            <tr>
+              <td>Sexe </td>
+              <td>
+                <select name="sexe">
+                    <option value="f">femme</option>
+                    <option value="h">homme</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Date de Naissance </td>
+              <td><input name="naissance" type="date"></td>
+            </tr>
+          </table>
+      </fieldset>
+
+
+      <fieldset>
+
+          <legend> preferences </legend>
+          <table>
+            <tr>
+              <td>Couleur favorite</td>
+              <td>
+                <input type="radio" name="couleur">Rouge
+                <input type="radio" name="couleur">Vert
+                <input type="radio" name="couleur">Bleu
+              </td>
+            </tr>
+            <tr>
+              <td>Centres d'intérêts</td>
+              <td>
+                <input name="sport" type="checkbox"> sport
+                <input name="danse" type="checkbox"> danse
+                <input name="musique" type="checkbox">musique
+                <input name="informatique" type="checkbox">informatique
+              </td>
+            </tr>
+          </table>
+      </fieldset>
+
+      <fieldset>
+          <legend>Commentaires</legend>
+          <table>
+            <tr>
+              <td>Message</td>
+              <td><textarea rows="4" cols="20"></textarea></td>
+            </tr>
+          </table>
+      </fieldset>
+      <input value="OK" type="submit">
+    </form>
+  <body>
+</html>
