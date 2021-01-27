@@ -1,0 +1,98 @@
+
+@media (max-width: 768px)
+{
+  body{background-color:orange;}
+}
+
+@media(min-width:769px)
+{
+  body{background-color:lightgreen;}
+}
+
+
+
+
+
+body
+{
+  margin:0;
+}
+#banniere
+{
+  border:solid black 1px;
+}
+
+#logo
+{
+float: left;
+width:12%;
+background-color: white;
+height: 140px;
+text-align:center;
+}
+
+#logo span
+{
+  position: relative;
+  top: 33px;
+  font-size: 60px;
+  font-weight: bold;
+
+}
+
+#accueil
+{
+background-color: #fbbc05;
+height: 140px;
+text-align:center;
+}
+
+#accueil span
+{
+position: relative;
+top: 40px;
+font-size:40px;
+text-transform: uppercase;
+
+}
+
+
+#menuLeft
+{
+  float:left;
+  width:15%
+}
+
+#center
+{
+    float:left;
+    width:70%;
+    height:1080px;
+}
+
+#menuRight
+{
+  float:right;
+  width:10%
+}
+
+#footer{
+  height: 70px;
+  background-color: yellow;
+  text-align : center;
+  clear:both;
+}
+
+#menuFooter
+{
+  float:left;
+  position:relative;
+  top:25px;
+}
+
+#copyright
+{
+  display:inline-block;
+  position:relative;
+  top:25px;
+}
