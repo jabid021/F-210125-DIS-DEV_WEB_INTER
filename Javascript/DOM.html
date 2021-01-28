@@ -1,0 +1,92 @@
+<html>
+
+
+
+    <body>
+        <p class="paragImpair" id="p1">
+          <span>
+          1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </span>
+        </p>
+
+        <h1>TITRE</h1>
+
+        
+        <p id="p2">
+          2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+
+        <p class="paragImpair" id="p3">
+          3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+
+
+    </body>
+</html>
+
+
+
+
+<script>
+
+function modifierHTMLParId()
+{
+  //var titre = prompt("Changer le titre");
+  document.title="Nouveau Titre";
+
+  parag1=document.getElementById("p1");
+
+  //parag1.innerHTML="Mon texte";
+
+  //p1.innerHTML="Mon texte2";
+
+  alert(p1.innerHTML);
+
+  p1.innerHTML=p2.innerHTML;
+}
+
+
+
+
+function modifierCouleurParId()
+{
+  p1.style.backgroundColor="red";
+  p1.style.color="white";
+
+  alert(p1.style.color);
+
+
+  if(p1.style.color=="white"){alert("C'est lisible");}
+  else{alert("Pas lisible du tout !"); p1.style.color="white";}
+}
+
+
+function modifierHTMLParClasse()
+{
+
+  parags=document.getElementsByClassName("paragImpair");
+
+  for(var i=0;i<parags.length;i++)
+  {
+    parags[i].innerHTML="TEXT";
+  }
+
+}
+
+
+function modifierCouleurParTypeElement()
+{
+  parags=document.getElementsByTagName("p");
+
+  for(var i=0;i<parags.length;i++)
+  {
+    parags[i].style.color="red";
+  }
+}
+
+modifierCouleurParTypeElement();
+
+
+</script>

@@ -3,109 +3,123 @@
 
 <script>
 
-pays=
-[
-  ["France","Paris"],
-  ["Espagne","Madrid"],
-  ["Angleterre","Londres"]
-]
-
-
-for(i=0;i<pays.length;i++)
+function jeuPays()
 {
-    reponse=prompt("Quelle est la capitale de : "+pays[i][0]);
-    if(reponse==pays[i][1])
-    {
-      alert("OK!");
-    }
-    else{
-      alert("NOK!");
-    }
-}
-/*
-prenom="Jordan";
-age=prompt("saisir votre age");
-testString="World";
-//majeur=true;
+  personne1=["Jordan","Abid"];
+  personne2=["toto","Titi"];
+
+  classe=[personne1,personne2];
 
 
 
-//alert(prenom);
-//alert("Hello "+testString+" !");
-//saisie=prompt("Saisir votre nom");
-//alert(saisie);
-console.log(age);
-console.log("Toto");
 
-/*
-if(confirm("Etes vous sur de vouloir supprimer ?")==false)
-{
-  alert("il a dit ok");
-}
-else
-{
-  alert("il a pas dit ok");
+  classe=[
+    ["Jordan","Abid"],
+    ["toto","Titi"]
+    ];
+
+
+
+  pays=
+  [
+    ["France","Paris"],
+    ["Espagne","Madrid"],
+    ["Angleterre","Londres"],
+    ["Pologne","Varsovie"],
+    ["Test","Test"],
+  ]
+
+
+  for(i=0;i<pays.length;i++)
+  {
+      reponse=prompt("Quelle est la capitale de : "+pays[i][0]);
+      if(reponse==pays[i][1])
+      {
+        alert("OK!");
+      }
+      else{
+        alert("NOK!");
+      }
+  }
 }
 
-
-if(age>18)
+function demoBoiteDialogue()
 {
-  alert("Majeur");
+  prenom="Jordan";
+  age=prompt("saisir votre age");
+  testString="World";
+  majeur=true;
+
+
+
+  alert(prenom);
+  alert("Hello "+testString+" !");
+  saisie=prompt("Saisir votre nom");
+  alert(saisie);
+  console.log(age);
+  console.log("Toto");
+
+
+  if(confirm("Etes vous sur de vouloir supprimer ?")==false)
+  {
+    alert("il a dit ok");
+  }
+  else
+  {
+    alert("il a pas dit ok");
+  }
+
+
+  if(age>18)
+  {
+    alert("Majeur");
+  }
+  else if(age==18){alert("Pile 18ans !");}
+  else
+  {
+    alert("Mineur");
+  }
+
 }
-else if(age==18){alert("Pile 18ans !");}
-else
+
+function verifNoteMax()
 {
-  alert("Mineur");
+  var saisieNote;
+  var max=0;
+  for(var i=1;i<=5;i++)
+  {
+    saisieNote=parseInt(prompt("Saisir note numero "+i));
+    if(saisieNote>max)
+    {max=saisieNote;}
+
+  }
+
+  alert("Max = "+max);
+
+  var notes = new Array();
+
+  notes[0]=12;
+  notes[1]=15;
+  notes[2]=20;
+
+  var notes2= [12,15,20];
+
+
+
+
+  notes[0]=prompt("Saisir note 0");
+  notes[1]=prompt("Saisir note 1");
+  notes[2]=prompt("Saisir note 2");
+
+  for(var i=1;i<=5;i++){}
+  for(var i=0;i<=2;i++)
+  {
+    notes[i]=prompt("Saisir note "+i);
+  }
+    alert(notes);
 }
-*/
 
-
-
-
-
-
-/*var saisieNote;
-var max=0;
-for(var i=1;i<=5;i++)
-{
-  saisieNote=parseInt(prompt("Saisir note numero "+i));
-  if(saisieNote>max)
-  {max=saisieNote;}
-
-}
-
-alert("Max = "+max);*/
-
-
-
-
-/*
-
-var notes = new Array();
-
-notes[0]=12;
-notes[1]=15;
-notes[2]=20;
-
-var notes2= [12,15,20];
-
-
-
-
-/*notes[0]=prompt("Saisir note 0");
-notes[1]=prompt("Saisir note 1");
-notes[2]=prompt("Saisir note 2");
-*/
-/*for(var i=1;i<=5;i++)
-for(var i=0;i<=2;i++)
-{
-  notes[i]=prompt("Saisir note "+i);
-}
-  alert(notes);
-
-
-
-*/
+jeuPays();
 
 
 
