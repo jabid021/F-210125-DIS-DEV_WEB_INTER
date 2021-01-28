@@ -1,0 +1,80 @@
+body{
+    background-color: #0066ff;
+}
+
+.navbar {
+    background-color: #0066ff;
+    font-size: 12px;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link {
+    color: #fff !important;
+    text-align: center;
+}
+
+.nav-pills .nav-link:hover {
+    color: #0066ff !important;
+    background-color: #fff !important;
+}
+
+.container{
+    margin:0 auto;
+    margin-top:5%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.contact-form {
+    font-size: 20px;
+    color: white;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+.form-control {
+    font-size: 18px;
+    height: 50px;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+input[type=submit] {
+    font-weight: bold;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    padding: 10px 10px;
+    margin: 25px 0;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: #4ccfd8;
+    border: 1px solid #0066ff;
+    text-decoration: none;
+}
+
+.table {
+    text-align: center;
+    color:white;
+    font-size: 20px;
+}
