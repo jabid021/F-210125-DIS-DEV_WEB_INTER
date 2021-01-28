@@ -1,6 +1,28 @@
 
+<!-- <div>Mot de passe admin : 12345</div>-->
+
 <script>
 
+pays=
+[
+  ["France","Paris"],
+  ["Espagne","Madrid"],
+  ["Angleterre","Londres"]
+]
+
+
+for(i=0;i<pays.length;i++)
+{
+    reponse=prompt("Quelle est la capitale de : "+pays[i][0]);
+    if(reponse==pays[i][1])
+    {
+      alert("OK!");
+    }
+    else{
+      alert("NOK!");
+    }
+}
+/*
 prenom="Jordan";
 age=prompt("saisir votre age");
 testString="World";
@@ -12,6 +34,8 @@ testString="World";
 //alert("Hello "+testString+" !");
 //saisie=prompt("Saisir votre nom");
 //alert(saisie);
+console.log(age);
+console.log("Toto");
 
 /*
 if(confirm("Etes vous sur de vouloir supprimer ?")==false)
@@ -22,7 +46,7 @@ else
 {
   alert("il a pas dit ok");
 }
-*/
+
 
 if(age>18)
 {
@@ -33,7 +57,55 @@ else
 {
   alert("Mineur");
 }
+*/
 
+
+
+
+
+
+/*var saisieNote;
+var max=0;
+for(var i=1;i<=5;i++)
+{
+  saisieNote=parseInt(prompt("Saisir note numero "+i));
+  if(saisieNote>max)
+  {max=saisieNote;}
+
+}
+
+alert("Max = "+max);*/
+
+
+
+
+/*
+
+var notes = new Array();
+
+notes[0]=12;
+notes[1]=15;
+notes[2]=20;
+
+var notes2= [12,15,20];
+
+
+
+
+/*notes[0]=prompt("Saisir note 0");
+notes[1]=prompt("Saisir note 1");
+notes[2]=prompt("Saisir note 2");
+*/
+/*for(var i=1;i<=5;i++)
+for(var i=0;i<=2;i++)
+{
+  notes[i]=prompt("Saisir note "+i);
+}
+  alert(notes);
+
+
+
+*/
 
 
 
