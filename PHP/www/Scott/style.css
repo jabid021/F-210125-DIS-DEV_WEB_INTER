@@ -78,3 +78,11 @@ input[type=submit]:hover {
     color:white;
     font-size: 20px;
 }
+
+
+
+.error {
+
+    text-align: center;
+    color: #ecf01b;
+}

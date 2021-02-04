@@ -11,30 +11,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
-        <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
-            <ul class="nav nav-pills navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="connect.html">Identification</a></li>
-                <li class="nav-item"><a class="nav-link" href="list.html">Liste</a></li>
-            </ul>
-        </div>
-    </nav>
     <div class="content">
         <div class="container">
             <h1>Se connecter</h1>
-            <form class="contact-form" action="" method="post">
+            <form class="contact-form" action="checkConnect.php" method="post">
                 <div class="row">
                     <div class="col-md-12">
                         <label for="number" id="number">Numéro</label>
-                        <input id="number" type="text" name="number" class="form-control" placeholder="Votre numéro">
+                        <input id="number" type="text" name="number" value="7839" class="form-control" placeholder="7788">
                     </div>
                     <div class="col-md-12">
                         <label for="name" id="name">Nom</label>
-                        <input id="name" type="text" name="name" class="form-control" placeholder="Votre nom">
+                        <input id="name" type="text" name="name" value="KING" class="form-control" placeholder="SCOTT">
                     </div>
                     <div class="col-md-12">
                         <input type="submit" class="btn btn-md btn-block" value="Login">
                     </div>
+
+
+                    <?php
+                      if(isset($_GET["error"])==true)
+                      {
+                          echo '<div class="col-12 error">Identifiants invalides</div> ';
+                      }
+                    ?>
                 </div>
             </form>
         </div>

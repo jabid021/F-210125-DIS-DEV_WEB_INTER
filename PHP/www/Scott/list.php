@@ -1,3 +1,11 @@
+<?php
+//Faire un tableau d'emp
+
+//Afficher le bon tableau
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,6 +44,12 @@
                     </tr>
                 </thead>
                 <tbody>
+
+
+
+
+
+
                     <tr>
                         <td>7839</td>
                         <td>KING</td>
@@ -46,56 +60,13 @@
                         <td>/</td>
                         <td>10</td>
                     </tr>
-                    <tr>
-                        <td>7698</td>
-                        <td>BLACK</td>
-                        <td>Responsable</td>
-                        <td>7839</td>
-                        <td>20-09-2017</td>
-                        <td>2850</td>
-                        <td>/</td>
-                        <td>30</td>
-                    </tr>
-                    <tr>
-                        <td>8825</td>
-                        <td>SPENCER</td>
-                        <td>Responsable</td>
-                        <td>7839</td>
-                        <td>05-05-2015</td>
-                        <td>2700</td>
-                        <td>/</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>7185</td>
-                        <td>YOUTH</td>
-                        <td>Commercial</td>
-                        <td>7698</td>
-                        <td>23-07-2020</td>
-                        <td>1750</td>
-                        <td>100</td>
-                        <td>30</td>
-                    </tr>
-                    <tr>
-                        <td>8395</td>
-                        <td>COCKNEY</td>
-                        <td>Commercial</td>
-                        <td>7698</td>
-                        <td>12-04-2019</td>
-                        <td>1800</td>
-                        <td>300</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>9245</td>
-                        <td>JACOB</td>
-                        <td>Secrétaire</td>
-                        <td>8825</td>
-                        <td>16-11-2018</td>
-                        <td>1900</td>
-                        <td>/</td>
-                        <td>10</td>
-                    </tr>
+
+
+
+
+
+
+
                 </tbody>
             </table>
             <form class="contact-form" action="" method="post">
