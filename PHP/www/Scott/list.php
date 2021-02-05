@@ -1,32 +1,5 @@
-<?php
-//Faire un tableau d'emp
-
-//Afficher le bon tableau
-
-?>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-</head>
+<?php include("header.php")?>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
-        <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
-            <ul class="nav nav-pills navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="connect.html">Identification</a></li>
-                <li class="nav-item"><a class="nav-link" href="list.html">Liste</a></li>
-            </ul>
-        </div>
-    </nav>
     <div class="content">
         <div class="container">
             <h1>Liste des employés</h1>
@@ -41,6 +14,7 @@
                         <th>Salaire</th>
                         <th>Commission</th>
                         <th>Numéro departement</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,6 +33,14 @@
                         <td>5000</td>
                         <td>/</td>
                         <td>10</td>
+                        <td>
+
+                          <form action="post/sendPost" method="post">
+                            <input type="hidden" name="tache" value="deleteEmp">
+                            <input type="hidden" name="empno" value="7839">
+                            <input type="submit" class="btn btn-danger" value="Supprimer">
+                          </form>
+                        </td>
                     </tr>
 
 
@@ -69,34 +51,54 @@
 
                 </tbody>
             </table>
-            <form class="contact-form" action="" method="post">
+
+
+
+
+
+
+            <input id="btnAddEmp" type="button" class="btn btn-success" value="Ajouter">
+
+
+
+
+
+
+
+
+
+
+            <form id="addEmp" class="contact-form" action="post/sendPost.php" method="post">
+
+              <input type="hidden" name="tache" value="addEmp">
                 <div class="row">
                     <div class="col-lg-6">
                         <label for="number" id="number">Numéro</label>
-                        <input id="number" type="text" name="number" class="form-control" placeholder="Votre numéro">
+                        <input id="number" type="number" required name="number" class="form-control" placeholder="Votre numéro">
                     </div>
                     <div class="col-lg-6">
                         <label for="name" id="name">Nom</label>
-                        <input id="name" type="text" name="name" class="form-control" placeholder="Votre nom">
+                        <input id="name" type="text" required name="name" class="form-control" placeholder="Votre nom">
                     </div>
                     <div class="col-lg-6">
                         <label for="job" id="job">Emploi</label>
-                        <input id="job" type="text" name="job" class="form-control">
+                        <input id="job" required type="text" name="job" class="form-control">
                     </div>
                     <div class="col-lg-6">
                         <label for="manager" id="manager">Manager</label>
                         <select id="manager" class="form-control" name="manager">
-                            <option>7839</option>
+                            <option>Pas de manager</option>
+                            <option  value="7839">7839-KING</option>
                             <option>7698</option>
                         </select>
                     </div>
                     <div class="col-lg-6">
                         <label for="date" id="date">Date d'embauche</label>
-                        <input id="date" type="date" name="date" class="form-control">
+                        <input id="date" type="date" required name="date" class="form-control">
                     </div>
                     <div class="col-lg-6">
                         <label for="salaire" id="salaire">Salaire</label>
-                        <input id="salaire" type="number" name="salaire" class="form-control">
+                        <input id="salaire" required type="number" name="salaire" class="form-control">
                     </div>
                     <div class="col-lg-6">
                         <label for="comm" id="comm">Commission</label>
@@ -105,10 +107,11 @@
                     <div class="col-lg-6">
                         <label for="numberDep" id="numberDep">Numéro de département</label>
                         <select id="numberDep" class="form-control" name="numberDep">
-                            <option>Choisir votre département</option>
-                            <option>10</option>
-                            <option>20</option>
-                            <option>30</option>
+                            <option value="NULL">Pas de département</option>
+                            <option value="10">ACCOUNTING</option>
+                            <option value="20">RESEARCH</option>
+                            <option value="30">SALES</option>
+                          <option value="40">OPERATIONS</option>
                         </select>
                     </div>
                     <div class="col-lg-12" style="text-align: center;">
@@ -120,3 +123,18 @@
     </div>
 </body>
 </html>
+
+
+
+<script>
+
+
+function showAddForm()
+{
+  addEmp.style.display="block";
+}
+
+
+btnAddEmp.onclick=showAddForm;
+
+</script>
