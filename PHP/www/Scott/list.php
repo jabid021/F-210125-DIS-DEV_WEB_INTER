@@ -58,7 +58,7 @@ $departements=doSQL("SELECT * from dept",array());
                 <form action='post/sendPost.php' method='post'>
                   <input type='hidden' name='tache' value='deleteEmp'>
                   <input type='hidden' name='empno' value=".$row["empno"].">
-                  <input type='submit' class='btn btn-danger' value='Supprimer'
+                  <input type='submit' class='btn btn-danger' value='Supprimer'>
                 </form>
 
               </td>

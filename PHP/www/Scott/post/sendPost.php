@@ -53,9 +53,18 @@ else if($_POST["tache"]=="addEmp")
   $comm=($_POST['comm']=="") ? null : $_POST['comm'];
   $deptno=$_POST['numberDep'];
 
-  $params=array($empno,$ename,$job,$mgr,$hiredate,$sal,$comm,$deptno);
+  $params=array(
+  "numero"=>$empno,
+  "nom"=>$ename,
+  "job"=>$job,
+  "manager"=>$mgr,
+  "hiredate"=>$hiredate,
+  "salaire"=>$sal,
+  "comm"=>$comm,
+  "dept"=>$deptno
+);
 
-  doSQL("INSERT into emp VALUES (?,?,?,?,?,?,?,?)",$params);
+  doSQL("INSERT into emp VALUES (:numero,:job,:comm,:hiredate,:manager,:nom,:salaire,:dept)",$params);
   //Insert into emp VALUES ()
   header('Location: ../list.php');
 }
@@ -64,6 +73,8 @@ else if($_POST["tache"]=="deleteEmp")
 {
   $idEmp=$_POST['empno'];
   //delete en base d'un employé
+    $params=array("numero"=>$idEmp);
+    doSQL("DELETE from emp where empno=:numero",$params);
     header('Location: ../list.php');
 }
 
