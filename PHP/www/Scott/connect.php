@@ -6,7 +6,7 @@ include("header.php");
     <div class="content">
         <div class="container">
             <h1>Se connecter</h1>
-            <form class="contact-form" action="post/sendPost.php" method="get">
+            <form class="contact-form" action="post/sendPost.php" method="post">
                 <input type="hidden" name="tache" value="checkConnect">
                 <div class="row">
                     <div class="col-md-12">

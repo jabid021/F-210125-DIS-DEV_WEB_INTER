@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("../bdd.php");
 
 if($_POST["tache"]=="checkConnect")
 {
@@ -8,26 +9,29 @@ if($_POST["tache"]=="checkConnect")
     $numero = $_POST["number"];
     $nom = $_POST["name"];
 
+    $employe=doSQL("SELECT empno from emp where empno=? and ename=?",array($numero,$nom));
 
-    if($numero=="7839" and $nom=="KING")
-    {
-        $_SESSION["isConnected"]="Y";
-        $_SESSION["login"]="KING";
-
-        header('Location: ../list.php');
-    }
-    else if($numero=="7788" and $nom=="SCOTT")
-    {
-        $_SESSION["isConnected"]="Y";
-        $_SESSION["login"]="SCOTT";
-        header('Location: ../fiche.php');
-    }
-    else
+    if(empty($employe))
     {
         header('Location: ../connect.php?error=y');
     }
 
+    else
+    {
+      if($nom=="KING")
+      {
+        $_SESSION["isConnected"]="Y";
+        $_SESSION["login"]="KING";
 
+        header('Location: ../list.php');
+      }
+      else
+      {
+        $_SESSION["isConnected"]="Y";
+        $_SESSION["login"]=$nom;
+        header('Location: ../fiche.php');
+      }
+    }
   }
 
   else
@@ -40,18 +44,20 @@ if($_POST["tache"]=="checkConnect")
 else if($_POST["tache"]=="addEmp")
 {
   //Ajout en base d'un employé
-  $empno=$_POST['empno'];
-  $ename=$_POST['ename'];
+  $empno=$_POST['number'];
+  $ename=$_POST['name'];
   $job=$_POST['job'];
-  $mgr=$_POST['mgr'];
-  $hiredate=$_POST['hiredate'];
-  $sal=$_POST['sal'];
-  $comm=$_POST['comm'];
-  $deptno=$_POST['deptno'];
+  $mgr=$_POST['manager'];
+  $hiredate=$_POST['date'];
+  $sal=$_POST['salaire'];
+  $comm=($_POST['comm']=="") ? null : $_POST['comm'];
+  $deptno=$_POST['numberDep'];
 
+  $params=array($empno,$ename,$job,$mgr,$hiredate,$sal,$comm,$deptno);
 
+  doSQL("INSERT into emp VALUES (?,?,?,?,?,?,?,?)",$params);
   //Insert into emp VALUES ()
-    header('Location: ../list.php');
+  header('Location: ../list.php');
 }
 
 else if($_POST["tache"]=="deleteEmp")
