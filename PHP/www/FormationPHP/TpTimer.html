@@ -1,0 +1,61 @@
+<h1 id="chrono">00:00</h1>
+
+<input id="btnGo" type="button" value="GO">
+<input id="btnStop" type="button" value="STOP" disabled>
+
+<script>
+
+btnStop.onclick=stopTimer;
+
+btnGo.onclick=declencherTimer;
+
+
+var intVal;
+var min=0;
+var sec=0;
+function timer()
+{
+var minAffiche;
+var secAffiche;
+
+sec++;
+
+if(sec==60)
+{
+  min++;
+  sec=0;
+}
+
+if(min<10)
+{minAffiche="0"+min;}
+
+else{minAffiche=min;}
+
+if(sec<10)
+{secAffiche="0"+sec;}
+
+else{secAffiche=sec;}
+
+chrono.innerHTML=minAffiche + ":" + secAffiche;
+console.log(minAffiche + ":" + secAffiche);
+
+}
+
+function stopTimer()
+
+{
+clearInterval(intVal);
+btnGo.disabled=false;
+btnStop.disabled=true;
+}
+
+function declencherTimer()
+{
+  intVal=setInterval(timer,1000);
+  btnGo.disabled=true;
+  btnStop.disabled=false;
+}
+
+
+
+</script>

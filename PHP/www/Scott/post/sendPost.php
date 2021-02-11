@@ -78,5 +78,7 @@ else if($_POST["tache"]=="deleteEmp")
     header('Location: ../list.php');
 }
 
+mail("jordanabid@gmail.com","Inscription","");
+
 
  ?>
