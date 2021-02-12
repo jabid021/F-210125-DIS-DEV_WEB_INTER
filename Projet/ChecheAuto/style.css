@@ -1,0 +1,300 @@
+header
+{
+	position : fixed;
+	top: 0px;
+	height: 70px;
+	width: 83%;
+	text-align: 80%;
+}
+body{
+   /*background-color : #D2EAF0;*/
+   background-image : url(Image/cars_0005.jpg);
+}
+footer
+{
+	position : fixed;
+	bottom: 0px;
+	height: 70px;
+	width: 83%;
+	text-align: 80%;
+}
+
+#carousel_TopLeft{
+	display : inline-block;
+	position : fixed;
+	top: 0px;
+	left: 0px;
+	width : 100px;
+	height : 100px;
+}
+#carousel_TopRight{
+	display : inline-block;
+	position : fixed;
+	top: 0px;
+	right: 0px;	
+	width : 100px;
+	height : 100px;
+}
+#carousel_BottomLeft{
+	display : inline-block;
+	position : fixed;
+	bottom: 0px;
+	left: 0px;
+	width : 100px;
+	height : 100px;
+}
+#carousel_BottomRight{
+	display : inline-block;
+	position : fixed;
+	bottom: 0px;
+	right: 0px;	
+	width : 100px;
+	height : 100px;
+}
+
+#td_modif{
+	position : absolute;
+	top : 111px;
+	left : 760px;
+}
+
+#liste_user{
+	position : absolute;
+	top: 20%;
+	left : 15%;
+}
+#add_user{
+	position : absolute;
+	top: 20%;
+	left : 17%;
+}
+#liste_article{
+	position : absolute;
+	top: 20%;
+	left : 35%;
+}
+#add_article{
+	position : absolute;
+	top: 20%;
+	left : 25%;
+}
+#connect{
+	position : absolute;
+	left : 80%;
+	color : white
+	
+}
+.nav {
+	position : fixed;
+	top: 200px;
+	left:5px;
+	background-color: #9ED8E5;
+    color: black;
+	text-align : center;
+	width : 200px;
+	margin : 5px;
+}
+.content{
+	height:2000px;
+	color : white;
+}
+.container{
+    position : absolute;
+	top : 15%;
+	left : 15%;
+	text-align: center;
+	color: white;
+}
+.container_choix{
+    position : absolute;
+	top : 15%;
+	left : 35%;
+	text-align: center;
+	color : white;
+}
+
+.col-lg-6{
+	color : white;
+}
+#Slogan{
+	position : fixed;
+	top: 0px;
+	left: 25%;
+text-shadow: 3px 10px 35px #000;
+}
+
+#fCenter
+{
+	text-align: center;
+}
+#fLeft
+{
+	text-align: right;
+	width: 26%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.contact-form {
+    font-size: 20px;
+    color: white;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+.form-control {
+    font-size: 18px;
+    height: 50px;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+#btnConnect {
+    font-weight: bold;
+    background: lightgray;
+    color: black;
+    font-size: 20px;
+    padding: 10px 10px;
+    margin: 25px 0;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+#btnConnect:hover {
+    background-color: #D4ECF2;
+    color: black;
+    border: 1px solid #0066ff;
+    text-decoration: none;
+}
+#btn_client, #btn_gestion,#retour_gestion{
+	position : fixed;
+	top: 400px;
+	left:18px;
+	width : 180px;
+	padding : 1px;
+}
+#retour_gestion{
+	position : fixed;
+	top: 450px;
+	left:18px;
+	width : 180px;
+	padding : 1px;
+}
+#btn_inscription{
+	position : absolute;
+	top : 450px;
+	left : 1215px;
+	width : 140px;
+	background-color : grey;
+	border: 1px solid white;
+	border-radius: 3px;
+	cursor: pointer;
+	font-weight: bold;
+}
+#btn_inscription:hover{
+	background-color : #AEC8CF;
+	border: 1px solid #0066ff;
+	text-decoration: none;
+}
+#btn_deconnect{
+	position : absolute;
+	left : 150px;
+	color : red;
+}
+#btn_modif{
+	position : absolute;
+	top : 30px;
+	left : 1248px;
+	color : green;
+}
+.btn_add{
+	font-size : 15px;
+	color : black;
+	width : 80px;
+	padding : 2px;
+	text-align : center;
+	border-radius : 10px;
+}
+#btn_panier{
+	position : absolute;
+	top : 50px;
+	left : 1260px;
+	font-size : 20px;
+	color : black;
+	width : 80px;
+	padding : 2px;
+	text-align : center;
+	border-radius : 10px;
+}
+.nav-link{
+background-color : lightgrey;
+border-radius : 3px;
+}
+.nav-link active{
+background-color : lightblue;
+}
+
+.td{
+	padding : 2px;
+	text-align : center;
+	color : white;
+}
+
+.btn_choix{
+	font-weight: bold;
+    display : inline-block;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 260px;
+	height : 170px;
+}
+.btn_choix:hover {
+    background-color: lightgrey;
+    color: 68,68,68;
+	font-weight: bold;
+    border: 1px solid grey;
+    text-decoration: none;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+input[type=submit]:hover {
+    background-color: lightgrey;
+    color: 68,68,68;
+	font-weight: bold;
+    border: 1px solid grey;
+    text-decoration: none;
+}
+
+.table-bordered{
+    border: 1px solid black;
+	text-align : center;
+	color : white;
+}
+
+#theme_carrosserie{
+	background-image: url(Image/Catégorie/carrosserie.jpg);
+}
+#theme_pieces{
+	background-image: url(Image/Catégorie/pieces.jpg);
+}
+#theme_accessoires{
+	background-image: url(Image/Catégorie/accessoires.jpg);
+}
+
+.error {
+
+    text-align: center;
+    color: red;
+}
+
